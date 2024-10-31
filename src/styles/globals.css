@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes scrollArrow {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+.scroll-arrow {
+  animation: scrollArrow 1.5s ease-in-out infinite;
+}
+
+.heading {
+  color: transparent;
+  -webkit-text-stroke: 1px #ff8000;
+  background: url("/back.png"); /* Adjust the file path as needed */
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  animation: back 20s linear infinite;
+}
+
+@keyframes back {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 2000px 0; /* Adjust the value based on the width of your image */
+  }
+}
